@@ -3,304 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>uScyt — Full-Stack Developer & Forensics Student</title>
+  <title>uScyt — Developer & Forensics</title>
   <meta name="description" content="Full-Stack Developer. Digital Forensics & IR student. Building secure software, breaking the rest." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Syne:wght@400;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
-  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
 
+  <!-- NAV -->
   <nav class="nav" id="nav">
-    <div class="nav-prompt">
-      <span class="c-green">uScyt</span><span class="c-dim">@</span><span
-        class="c-blue">void</span><span class="c-dim">:</span><span
-        class="c-mauve">~</span><span class="c-dim"> $</span>
-    </div>
+    <a href="#hero" class="nav-logo">uS<span class="accent">_</span></a>
     <div class="nav-links" id="nav-links">
-      <a href="#about"  class="nav-link">/about</a>
-      <a href="#skills" class="nav-link">/skills</a>
-      <a href="#status" class="nav-link">/status</a>
-      <a href="#links"  class="nav-link">/links</a>
+      <a href="#about"   class="nav-link">about</a>
+      <a href="#skills"  class="nav-link">skills</a>
+      <a href="#status"  class="nav-link">status</a>
+      <a href="#connect" class="nav-link">connect</a>
     </div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
     </button>
   </nav>
 
+  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-inner">
 
-      <div class="hero-left">
-        <div class="avatar-wrap">
-          <div class="avatar-ring"></div>
-          <img
-            src="https://avatars.githubusercontent.com/u/262564619?v=4"
-            alt="uScyt"
-            class="avatar-img"
-          />
-          <span class="avatar-status" aria-hidden="true"></span>
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-dot" aria-hidden="true"></span>
+          <span>available for collaboration</span>
+        </div>
+
+        <h1 class="hero-name">uScyt</h1>
+
+        <div class="hero-meta">
+          <div class="hero-roles">
+            <span class="role">Full-Stack Dev</span>
+            <span class="role-sep" aria-hidden="true">/</span>
+            <span class="role">Forensics &amp; IR</span>
+          </div>
+          <p class="hero-bio">
+            <span id="typed-text"></span><span class="type-cursor" aria-hidden="true">|</span>
+          </p>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="https://github.com/uScyt" class="cta-link" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            github/uScyt
+          </a>
+          <a href="https://tryhackme.com/p/uScyt" class="cta-link" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.705 0C7.54 0 4.902 2.285 4.902 5.556c0 .113.008.225.016.337-2.44.778-4.254 3.122-4.254 5.785 0 3.37 2.685 6.1 5.996 6.1H19.34C21.89 17.778 24 15.63 24 12.988c0-2.34-1.607-4.326-3.797-4.86.024-.225.04-.454.04-.685C20.243 3.34 16.951 0 12.914 0h-2.209zm0 1.488h2.21c3.231 0 5.84 2.646 5.84 5.955 0 .387-.04.766-.113 1.133l-.153.79.798.12c1.782.274 3.143 1.84 3.143 3.612 0 2.01-1.605 3.647-3.59 3.647H6.66c-2.435 0-4.508-2.097-4.508-4.612 0-2.258 1.573-4.209 3.693-4.526l.903-.137-.09-.91a4.58 4.58 0 0 1-.04-.556c0-2.394 1.895-4.516 4.088-4.516z"/></svg>
+            tryhackme
+          </a>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="hero-prompt-line">
-          <span class="c-green">▶</span>
-          <span class="c-dim">root@void:~ $<span class="cursor-blink"></span></span>
+      <div class="hero-aside" aria-hidden="true">
+        <div class="avatar-wrap">
+          <img src="https://avatars.githubusercontent.com/u/262564619?v=4" alt="" class="avatar-img" />
+          <div class="avatar-overlay"></div>
         </div>
-
-        <h1 class="hero-name" data-text="uScyt">uScyt</h1>
-
-        <div class="hero-roles">
-          <span class="role-badge" style="--accent: var(--blue)">Full-Stack Developer</span>
-          <span class="role-sep">·</span>
-          <span class="role-badge" style="--accent: var(--mauve)">Digital Forensics &amp; IR</span>
-        </div>
-
-        <p class="hero-tagline">
-          <span id="tagline"></span><span class="tagline-cursor">|</span>
-        </p>
-
-        <div class="hero-cta">
-          <a href="https://github.com/uScyt" class="cta-btn cta-secondary" target="_blank" rel="noopener">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-            github/uScyt
-          </a>
-          <a href="https://tryhackme.com/p/uScyt" class="cta-btn cta-primary" target="_blank" rel="noopener">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M10.705 0C7.54 0 4.902 2.285 4.902 5.556c0 .113.008.225.016.337-2.44.778-4.254 3.122-4.254 5.785 0 3.37 2.685 6.1 5.996 6.1H19.34C21.89 17.778 24 15.63 24 12.988c0-2.34-1.607-4.326-3.797-4.86.024-.225.04-.454.04-.685C20.243 3.34 16.951 0 12.914 0h-2.209zm0 1.488h2.21c3.231 0 5.84 2.646 5.84 5.955 0 .387-.04.766-.113 1.133l-.153.79.798.12c1.782.274 3.143 1.84 3.143 3.612 0 2.01-1.605 3.647-3.59 3.647H6.66c-2.435 0-4.508-2.097-4.508-4.612 0-2.258 1.573-4.209 3.693-4.526l.903-.137-.09-.91a4.58 4.58 0 0 1-.04-.556c0-2.394 1.895-4.516 4.088-4.516z"/>
-            </svg>
-            tryhackme/uScyt
-          </a>
+        <div class="aside-meta">
+          <span><span class="accent">›</span> status <span class="meta-val">online</span></span>
+          <span><span class="accent">›</span> loc <span class="meta-val">void:~</span></span>
+          <span><span class="accent">›</span> uptime <span class="meta-val" id="uptime">calculating…</span></span>
         </div>
       </div>
 
     </div>
 
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span>scroll</span>
+    <div class="scroll-indicator" aria-hidden="true">
       <div class="scroll-line"></div>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="section reveal">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">01</span>
-        <span class="section-slash">/</span>
-        <span class="section-name">about</span>
-        <div class="section-rule"></div>
+      <div class="sec-label">
+        <span class="sec-num">01</span>
+        <span class="sec-name">about</span>
       </div>
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <span class="terminal-title">bash — about.txt</span>
-          <span class="terminal-cmd">$ cat about.txt</span>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="sec-title">Who<br><em>am I</em></h2>
+          <p class="about-p">Full-Stack developer with a focus on systems programming. Currently studying Digital Forensics &amp; Incident Response — memory analysis, disk forensics, malware triage.</p>
+          <p class="about-p">I build software that's hard to break. Then I break it to understand it better.</p>
         </div>
-        <div class="terminal-body">
-          <div class="code-with-gutter">
-            <div class="gutter">
-              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-              <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
-              <span>11</span><span>12</span>
+        <div class="about-right">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-dots"><span></span><span></span><span></span></span>
+              <span class="code-filename">about.rs</span>
             </div>
-            <pre class="code-block"><span class="s-kw">const</span> <span class="s-var">uScyt</span> <span class="s-op">=</span> {
-    <span class="s-key">role</span><span class="s-op">:</span>              <span class="s-str">"Full-Stack Developer"</span><span class="s-op">,</span>
-    <span class="s-key">education</span><span class="s-op">:</span>         <span class="s-str">"Digital Forensics &amp; IR"</span><span class="s-op">,</span>
-    <span class="s-key">languages</span><span class="s-op">:</span>         [<span class="s-str">"Rust"</span><span class="s-op">,</span> <span class="s-str">"Python"</span><span class="s-op">,</span> <span class="s-str">"PHP"</span><span class="s-op">,</span> <span class="s-str">"JS"</span>]<span class="s-op">,</span>
-    <span class="s-key">interests</span><span class="s-op">:</span>         [
-        <span class="s-str">"Offensive Security"</span><span class="s-op">,</span>
-        <span class="s-str">"Malware Analysis"</span><span class="s-op">,</span>
-        <span class="s-str">"Reverse Engineering"</span><span class="s-op">,</span>
-        <span class="s-str">"CTF Challenges"</span>
-    ]<span class="s-op">,</span>
-    <span class="s-key">currentlyLearning</span><span class="s-op">:</span> <span class="s-str">"Always something new"</span>
-}<span class="s-op">;</span></pre>
+            <pre class="code-body"><span class="t-kw">struct</span> <span class="t-ty">Developer</span> {
+    name<span class="t-op">:</span>     <span class="t-str">"uScyt"</span>,
+    stack<span class="t-op">:</span>    [<span class="t-str">"Rust"</span>, <span class="t-str">"Python"</span>, <span class="t-str">"JS"</span>],
+    domains<span class="t-op">:</span>  [
+        <span class="t-str">"Offensive Sec"</span>,
+        <span class="t-str">"Malware Analysis"</span>,
+        <span class="t-str">"Reverse Eng"</span>,
+        <span class="t-str">"CTF"</span>,
+    ],
+    mode<span class="t-op">:</span>     <span class="t-str">"always learning"</span>,
+}</pre>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" class="section reveal">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">02</span>
-        <span class="section-slash">/</span>
-        <span class="section-name">skills</span>
-        <div class="section-rule"></div>
+      <div class="sec-label">
+        <span class="sec-num">02</span>
+        <span class="sec-name">skills</span>
       </div>
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
+      <h2 class="sec-title">Tech<br><em>stack</em></h2>
+      <div class="skills-table">
+        <div class="skills-row">
+          <span class="skills-cat">Languages</span>
+          <div class="skills-items" id="skills-langs">
+            <span class="skill">Rust</span>
+            <span class="skill">Python</span>
+            <span class="skill">PHP</span>
+            <span class="skill">JavaScript</span>
           </div>
-          <span class="terminal-title">bash — skills/</span>
-          <span class="terminal-cmd">$ ls skills/</span>
         </div>
-        <div class="terminal-body">
-          <div class="skills-section">
-            <div class="skill-group">
-              <span class="skill-group-label">// languages</span>
-              <div class="skill-row">
-                <span class="skill-tag" style="--c: var(--peach)">Rust</span>
-                <span class="skill-tag" style="--c: var(--yellow)">Python</span>
-                <span class="skill-tag" style="--c: var(--lavender)">PHP</span>
-                <span class="skill-tag" style="--c: var(--yellow)">JavaScript</span>
-              </div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">// frontend</span>
-              <div class="skill-row">
-                <span class="skill-tag" style="--c: var(--peach)">HTML</span>
-                <span class="skill-tag" style="--c: var(--blue)">CSS</span>
-                <span class="skill-tag" style="--c: var(--teal)">Vue.js</span>
-              </div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">// backend</span>
-              <div class="skill-row">
-                <span class="skill-tag" style="--c: var(--green)">Node.js</span>
-                <span class="skill-tag" style="--c: var(--subtext1)">Express</span>
-                <span class="skill-tag" style="--c: var(--blue)">MySQL</span>
-              </div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">// environment &amp; tools</span>
-              <div class="skill-row">
-                <span class="skill-tag" style="--c: var(--blue)">Linux</span>
-                <span class="skill-tag" style="--c: var(--sapphire)">Arch</span>
-                <span class="skill-tag" style="--c: var(--sapphire)">Docker</span>
-                <span class="skill-tag" style="--c: var(--maroon)">Git</span>
-                <span class="skill-tag" style="--c: var(--green)">Bash</span>
-                <span class="skill-tag" style="--c: var(--green)">Neovim</span>
-              </div>
-            </div>
+        <div class="skills-row">
+          <span class="skills-cat">Frontend</span>
+          <div class="skills-items">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Vue.js</span>
+          </div>
+        </div>
+        <div class="skills-row">
+          <span class="skills-cat">Backend</span>
+          <div class="skills-items">
+            <span class="skill">Node.js</span>
+            <span class="skill">Express</span>
+            <span class="skill">MySQL</span>
+          </div>
+        </div>
+        <div class="skills-row">
+          <span class="skills-cat">Environment</span>
+          <div class="skills-items">
+            <span class="skill">Linux</span>
+            <span class="skill">Arch</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Git</span>
+            <span class="skill">Bash</span>
+            <span class="skill">Neovim</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- STATUS -->
   <section id="status" class="section reveal">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">03</span>
-        <span class="section-slash">/</span>
-        <span class="section-name">status</span>
-        <div class="section-rule"></div>
+      <div class="sec-label">
+        <span class="sec-num">03</span>
+        <span class="sec-name">status</span>
       </div>
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
+      <h2 class="sec-title">Current<br><em>focus</em></h2>
+      <div class="status-grid">
+        <div class="status-card">
+          <div class="status-top">
+            <span class="status-name">Forensics &amp; IR</span>
+            <span class="badge badge-blue">Student</span>
           </div>
-          <span class="terminal-title">bash — status</span>
-          <span class="terminal-cmd">$ status --current</span>
+          <p class="status-desc">Digital Forensics and Incident Response studies. Memory analysis, disk forensics, malware triage.</p>
         </div>
-        <div class="terminal-body">
-          <div class="status-list">
-            <div class="status-item">
-              <span class="status-label">Forensics &amp; IR</span>
-              <span class="status-fill"></span>
-              <span class="status-val val-blue">
-                <span class="status-dot"></span>Student
-              </span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Full-Stack Dev</span>
-              <span class="status-fill"></span>
-              <span class="status-val val-green">
-                <span class="status-dot dot-pulse"></span>Rust / Node / Vue
-              </span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Malware Analysis</span>
-              <span class="status-fill"></span>
-              <span class="status-val val-yellow">
-                <span class="status-dot"></span>Exploring
-              </span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">CTF Challenges</span>
-              <span class="status-fill"></span>
-              <span class="status-val val-green">
-                <span class="status-dot dot-pulse"></span>Active
-              </span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Reverse Engineering</span>
-              <span class="status-fill"></span>
-              <span class="status-val val-teal">
-                <span class="status-dot"></span>Learning
-              </span>
-            </div>
+        <div class="status-card">
+          <div class="status-top">
+            <span class="status-name">Full-Stack Dev</span>
+            <span class="badge badge-green">Active</span>
           </div>
+          <p class="status-desc">Building production software with Rust, Node.js, and Vue. Systems-level focus with security in mind.</p>
+        </div>
+        <div class="status-card">
+          <div class="status-top">
+            <span class="status-name">Malware Analysis</span>
+            <span class="badge badge-yellow">Exploring</span>
+          </div>
+          <p class="status-desc">Static and dynamic analysis. Reverse engineering binaries with Ghidra and x64dbg.</p>
+        </div>
+        <div class="status-card">
+          <div class="status-top">
+            <span class="status-name">CTF Challenges</span>
+            <span class="badge badge-green">Active</span>
+          </div>
+          <p class="status-desc">Regular participation across web, pwn, forensics, and cryptography categories.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="links" class="section reveal">
+  <!-- CONNECT -->
+  <section id="connect" class="section reveal">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">04</span>
-        <span class="section-slash">/</span>
-        <span class="section-name">connect</span>
-        <div class="section-rule"></div>
+      <div class="sec-label">
+        <span class="sec-num">04</span>
+        <span class="sec-name">connect</span>
       </div>
-      <div class="links-grid">
-        <a href="https://github.com/uScyt" class="link-card" target="_blank" rel="noopener">
-          <div class="link-card-sweep" style="--accent: var(--blue)"></div>
-          <div class="link-icon">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
+      <h2 class="sec-title">Find<br><em>me here</em></h2>
+      <div class="connect-list">
+        <a href="https://github.com/uScyt" class="connect-item" target="_blank" rel="noopener">
+          <div class="connect-left">
+            <span class="connect-num">01</span>
+            <div class="connect-info">
+              <span class="connect-platform">GitHub</span>
+              <span class="connect-handle">@uScyt</span>
+            </div>
           </div>
-          <div class="link-info">
-            <span class="link-platform">GitHub</span>
-            <span class="link-handle">@uScyt</span>
-          </div>
-          <span class="link-arrow">→</span>
+          <span class="connect-arrow" aria-hidden="true">↗</span>
         </a>
-
-        <a href="https://tryhackme.com/p/uScyt" class="link-card" target="_blank" rel="noopener">
-          <div class="link-card-sweep" style="--accent: var(--green)"></div>
-          <div class="link-icon" style="color: var(--green)">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M10.705 0C7.54 0 4.902 2.285 4.902 5.556c0 .113.008.225.016.337-2.44.778-4.254 3.122-4.254 5.785 0 3.37 2.685 6.1 5.996 6.1H19.34C21.89 17.778 24 15.63 24 12.988c0-2.34-1.607-4.326-3.797-4.86.024-.225.04-.454.04-.685C20.243 3.34 16.951 0 12.914 0h-2.209zm0 1.488h2.21c3.231 0 5.84 2.646 5.84 5.955 0 .387-.04.766-.113 1.133l-.153.79.798.12c1.782.274 3.143 1.84 3.143 3.612 0 2.01-1.605 3.647-3.59 3.647H6.66c-2.435 0-4.508-2.097-4.508-4.612 0-2.258 1.573-4.209 3.693-4.526l.903-.137-.09-.91a4.58 4.58 0 0 1-.04-.556c0-2.394 1.895-4.516 4.088-4.516z"/>
-            </svg>
+        <a href="https://tryhackme.com/p/uScyt" class="connect-item" target="_blank" rel="noopener">
+          <div class="connect-left">
+            <span class="connect-num">02</span>
+            <div class="connect-info">
+              <span class="connect-platform">TryHackMe</span>
+              <span class="connect-handle">uScyt</span>
+            </div>
           </div>
-          <div class="link-info">
-            <span class="link-platform">TryHackMe</span>
-            <span class="link-handle">uScyt</span>
-          </div>
-          <span class="link-arrow">→</span>
+          <span class="connect-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <span class="c-green">uScyt@void:~$</span>
-      <span class="c-dim"> Built with passion &amp; caffeine</span>
+    <div class="container footer-inner">
+      <span>uScyt &copy; 2025</span>
+      <a href="#hero" class="footer-top" aria-label="Back to top">↑ top</a>
     </div>
-    <a href="#hero" class="footer-top" aria-label="Back to top">↑</a>
   </footer>
 
   <script src="script.js"></script>
